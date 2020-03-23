@@ -5,9 +5,14 @@
 </template>
 
 <style>
+@font-face {
+  font-family: 'Pixel';
+  src: url('../assets/fonts/pixel.ttf');
+}
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Pixel', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  color: white;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
