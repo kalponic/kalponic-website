@@ -15,7 +15,11 @@
         <div class="row"></div>
       </div> -->
     </div>
-    <div class="test">Hello</div>
+    <div class="body">
+      <div class="test"></div>
+      <div class="test"></div>
+      <div class="test"></div>
+    </div>
   </div>
 </template>
 
@@ -34,6 +38,7 @@ export default {
   methods: {
     openSite() {
       document.querySelector('.wrapper').classList.add('animate')
+      document.querySelector('.body').classList.add('animate-in')
     }
   }
 }
@@ -78,6 +83,22 @@ export default {
   animation-duration: 1s;
 }
 
+.body {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  bottom: -100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.test {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
+
 /* .transition-box {
   width: 100%;
   position: fixed;
@@ -105,6 +126,13 @@ export default {
   animation-timing-function: ease-in;
 }
 
+.animate-in {
+  animation-name: animateIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
 /* @keyframes toggleColor {
   from {
     background-color: white;
@@ -114,6 +142,16 @@ export default {
     background-color: black;
   }
 } */
+
+@keyframes animateIn {
+  from {
+    bottom: -100%;
+  }
+
+  to {
+    bottom: 0;
+  }
+}
 
 @keyframes transitionBox {
   from {
